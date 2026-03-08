@@ -289,7 +289,7 @@ class FinancialDataFetcher:
 
         sns.heatmap(corr, annot=True, fmt='.2f', cmap=cmap,
                    center=0, square=True, linewidths=0.5, ax=ax,
-                   vmin=-1, vmax=1)
+                   vmin=-1, vmax=1, mask=mask)
 
         ax.set_title('Portfolio Correlation Matrix\n(Returns-based, Pearson)', fontsize=12)
         plt.tight_layout()

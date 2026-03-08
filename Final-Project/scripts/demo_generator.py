@@ -169,8 +169,6 @@ def generate_stock_chart_image():
         prices.append(prices[-1] * (1 + change))
 
     prices = np.array(prices)
-    ma20 = pd.rolling_mean_simulated(prices, 20)
-    ma50 = pd.rolling_mean_simulated(prices, 50)
 
     # Simple moving average calculation
     def moving_avg(arr, n):

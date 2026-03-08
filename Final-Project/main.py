@@ -370,9 +370,8 @@ def menu_full_pipeline():
 
     ocr_text = ""
     try:
-        from demo_generator import generate_all, DEMO_DIR, create_demo_dir
+        from demo_generator import create_demo_dir, generate_financial_report_image
         create_demo_dir()
-        from demo_generator import generate_financial_report_image
         img_path = generate_financial_report_image()
 
         from ocr_engine import OCREngine

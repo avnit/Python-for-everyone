@@ -22,7 +22,6 @@ How it works:
 
 import json
 import requests
-from datetime import datetime
 
 
 SYSTEM_PROMPT = """You are FinanceAI, an expert financial analyst assistant running
