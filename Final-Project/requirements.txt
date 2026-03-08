@@ -1,0 +1,66 @@
+# FinancialAI - Final Project Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Financial Data ──────────────────────────────────────
+yfinance>=0.2.40          # Stock/ETF historical data (Yahoo Finance)
+openpyxl>=3.1.0           # Excel file support (for portfolio exports)
+
+# ── Data Processing ─────────────────────────────────────
+pandas>=2.0.0             # DataFrames and time-series analysis
+numpy>=1.24.0             # Numerical computing and array operations
+
+# ── Machine Learning ────────────────────────────────────
+scikit-learn>=1.3.0       # Random Forest, StandardScaler, metrics
+
+# ── OCR (Image to Text) ─────────────────────────────────
+easyocr>=1.7.0            # Deep learning OCR (downloads model ~100MB first run)
+Pillow>=10.0.0            # Image loading, preprocessing, enhancement
+
+# ── Visualization ───────────────────────────────────────
+matplotlib>=3.7.0         # Charts, plots, and figure generation
+seaborn>=0.12.0           # Statistical visualizations (correlation heatmap)
+
+# ── LLM Communication ───────────────────────────────────
+requests>=2.31.0          # HTTP client for Ollama REST API
+
+# ── Optional: Ollama Python client (alternative to requests) ──
+# ollama>=0.1.0           # Official Ollama Python library (optional)
+
+# ─────────────────────────────────────────────────────────────
+# SETUP INSTRUCTIONS
+# ─────────────────────────────────────────────────────────────
+#
+# 1. Create virtual environment (recommended):
+#    python -m venv venv
+#    venv\Scripts\activate          (Windows)
+#    source venv/bin/activate       (Mac/Linux)
+#
+# 2. Install Python packages:
+#    pip install -r requirements.txt
+#
+# 3. Install Ollama for local LLM:
+#    Download from: https://ollama.com
+#    Then pull a model:
+#      ollama pull llama3.2          (general purpose, recommended)
+#      ollama pull dolphin-mistral   (uncensored, no restrictions)
+#      ollama pull mistral           (fast 7B model)
+#
+# 4. Run the application:
+#    python main.py
+#
+# ─────────────────────────────────────────────────────────────
+# OLLAMA MODEL GUIDE
+# ─────────────────────────────────────────────────────────────
+#
+# llama3.2        Meta's LLaMA 3.2 - best for financial analysis
+# dolphin-mistral Uncensored fine-tune - no content restrictions
+#                 runs 100% locally, no data leaves your machine
+# mistral         Mistral 7B - fast responses, good quality
+# qwen2.5         Alibaba Qwen - strong multilingual support
+#
+# Minimum hardware for local LLM:
+#   RAM:  8GB (for 7B parameter models)
+#   Disk: ~5GB per model
+#   GPU:  Optional but speeds up generation significantly
+#
+# ─────────────────────────────────────────────────────────────
