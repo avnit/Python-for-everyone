@@ -213,3 +213,19 @@ If you have questions or need help:
 
 **Happy Learning! 🐍✨**
 
+<!-- ARCH-DIAGRAM:START -->
+
+## Architecture
+
+> Auto-generated architecture diagram. See [`docs/context-map.md`](docs/context-map.md) for the full context map (core application, containers/cloud, and database connections).
+
+```mermaid
+flowchart TD
+  User([User / Client])
+  App["Python-for-everyone<br/><small>main.py</small><br/>FastAPI + Uvicorn"]
+  DB0[("SQLite")]
+  User --> App
+  App --> DB0
+```
+
+<!-- ARCH-DIAGRAM:END -->
